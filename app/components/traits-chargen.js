@@ -20,7 +20,7 @@ export default Component.extend({
       
     actions: { 
         addTrait() {
-          this.get('model.char.traits').pushObject(EmberObject.create( {name: "Spell Name - Type (World, Defensive, Offensive)", desc: "Enter a Description"} ));
+          this.get('model.char.traits').pushObject(EmberObject.create( {name: "Spell Name - Type (World, Defensive, Offensive)", desc: "Enter a 20-40 word description of the spell"} ));
         },
         removeTrait(name) {
           let found = this.get('model.char.traits').find(t => t.name === name);
