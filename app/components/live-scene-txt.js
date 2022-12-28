@@ -12,7 +12,7 @@ export default Component.extend({
 
   actions: {
 
-    addTelegram() {
+    addTxt() {
         let pose = this.get('scenePose');
         if (pose.length === 0) {
             this.get('flashMessages').danger("You haven't entered anything.");
@@ -20,7 +20,7 @@ export default Component.extend({
         }
         let api = this.get('gameApi');
         this.set('scenePose', '');
-        api.requestOne('addTelegram', { scene_id: this.get('scene.id'),
+        api.requestOne('addTxt', { scene_id: this.get('scene.id'),
             pose: pose,
             pose_char: this.get('scene.poseChar.id') }, null)
         .then( (response) => {
