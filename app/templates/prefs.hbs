@@ -1,0 +1,14 @@
+<h1>RP Preferences</h1>
+
+<div class="prefs-list">
+{{#each this.model as |char|}}
+<div class="prefs-list-item">
+  <div class="prefs-list-icon">
+    <CharIconInline @char={{char}} />
+  </div>
+  <div class="prefs-list-description">
+    <AnsiFormat @text={{char.rp_prefs}} />
+  </div>
+</div>
+{{/each}}
+</div>
